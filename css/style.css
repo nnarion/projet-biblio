@@ -1,0 +1,254 @@
+body {
+    background-color: #eeeeee;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    width: 100%;
+    height: 120vh;
+    background: #EEEEF4;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+nav{
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #606163;
+    position: relative;
+
+    
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #EEEEF4;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav ul li a:hover, nav ul li a:visited, nav ul li a:link, nav ul li a:active
+{
+    text-decoration: none;
+}
+.btn{
+    background: #FFAEBD;
+    border-radius: 5px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+.btn:hover{
+    background: transparent;
+    color: #FFAEBD;
+    border: 1px solid #FFAEBD;
+}
+
+
+.frm {
+    width: 50%;
+    position: relative;
+    top: 25vh;
+    /* left: 0vw; */
+    /* transform: translate(45%, 300%); */
+    margin: auto;
+    display: flex;
+}
+
+@media screen and (max-width: 561px) {
+    .frm {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 492px) {
+    .frm {
+        width: 90%;
+    }
+}
+
+.form-control {
+    width: 80%;
+    float: left;
+}
+
+.srcBtn {
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    float: left;
+}
+
+.booktit {
+    width: 50%;
+    font-size: 48px;
+    color: #696969;
+    position: absolute;
+    top: 10vh;
+    left: 35vw;
+    /* transform: translate(67%, 70%); */
+    /* margin: auto; */
+}
+
+@media screen and (max-width: 561px) {
+    .booktit {
+        width: 100%;
+        font-size: 42px;
+        left: 25vw;
+    }
+}
+
+@media screen and (max-width: 492px) {
+    .booktit {
+        width: 80%;
+        left: 20vw;
+        font-size: 36px;
+        /* margin-bottom: 5px; */
+    }
+}
+
+.card-img-top {
+    min-width: 28%;
+    max-width: 32%;
+    height: 15vw;
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: cover;
+    /* padding: 10px; */
+    transform: translateY(-15%);
+    box-shadow: 5px 5px 5px -3px #888888;
+}
+
+@media screen and (max-width: 492px) {
+    .card-img-top {
+        height: 25vh;
+        min-width: 50%;
+        transform: translateY(-15px);
+        object-fit: none;
+        margin-bottom: 10px;
+    }
+}
+
+.results {
+    background-color:#ddd;
+    position: relative;
+    padding: 2em;
+    top: 30vh;
+    width: 100%; 
+    /* height: 100vh; */
+    min-height: 62vh;
+    float: left;
+}
+
+.card-body {
+    /* float: left; */
+    display: inline-block;
+    transform: translateY(-30px);
+}
+
+.card-title {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card {
+    float: left;
+    margin: 2.5%;
+    width: 100%;
+    box-shadow: 5px 5px 5px -3px #888888;
+}
+
+@media screen and (max-width: 492px) {
+    .card {
+        margin: 5%;
+        margin-left: 1%;
+    }
+}
+
+#query-display {
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 492px) {
+    #query-display {
+        font-size: 24px;
+    }
+}
+
+/* Page loader */
+.loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #218838;
+    border-bottom: 16px solid #218838;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 43.5vw;
+    display: block;
+    z-index: 9999;
+  }
+  
+  @media screen and (max-width: 492px) {
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 12px solid #218838;
+        border-bottom: 12px solid #218838;
+        width: 80px;
+        height: 80px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        left: 40vw;
+        display: block;
+        z-index: 9999;
+      }
+}
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
